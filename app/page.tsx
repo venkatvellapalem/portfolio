@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Vᴇɴᴋᴀᴛ Vᴇʟʟᴀᴘᴀʟᴇᴍ',
+  title: 'vᴇɴᴋᴀᴛvᴇʟʟᴀᴘᴀʟᴇᴍ:~# _',
 }
 
 const links = [
@@ -108,8 +108,8 @@ export default function HomePage() {
         <div className="animate-fade-in opacity-0 delay-500 mt-12 pt-8 border-t border-border/30">
           <p className="font-mono text-xs text-text-dim mb-3">explore more</p>
           <div className="flex gap-6">
-            <Link href="/about" className="font-mono text-xs text-text-dim hover:text-accent-green transition-colors hover-underline">
-              /about
+            <Link href="/whoami" className="font-mono text-xs text-text-dim hover:text-accent-green transition-colors hover-underline">
+              /whoami
             </Link>
             <Link href="/projects" className="font-mono text-xs text-text-dim hover:text-accent-green transition-colors hover-underline">
               /projects

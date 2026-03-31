@@ -49,7 +49,7 @@ export default function HomePage() {
         </div>
 
         {/* Name */}
-        <h1 className="animate-slide-up opacity-0 delay-100 font-sans text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight mb-4 tracking-tight">
+        <h1 className="animate-slide-up opacity-0 delay-100 font-sans text-2xl md:text-3xl lg:text-4xl font-semibold text-text leading-tight mb-4 tracking-tight">
           Vellapalem Jyothi Venkat Reddy<br />
           <span className="text-text-muted font-light">@Cytrus</span>
         </h1>

@@ -1,0 +1,31 @@
+{
+  "name": "venkat-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.1",
+    "next-mdx-remote": "^6.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^10.1.0",
+    "eslint-config-next": "^16.2.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'cytrus:~/contact/# _',
   description: 'Get in touch with Venkat Vellapalem.',
 }
 
@@ -33,8 +33,8 @@ const contacts = [
   },
   {
     label: 'TryHackMe',
-    value: 'Top 3% globally',
-    href: 'https://tryhackme.com',
+    value: 'Top 2% globally',
+    href: 'https://tryhackme.com/p/venkatvellapalem',
     desc: 'CTF & security challenges platform',
     svg: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',
     fill: false,

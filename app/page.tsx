@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'vᴇɴᴋᴀᴛvᴇʟʟᴀᴘᴀʟᴇᴍ:~# _',
+  title: 'cytrus:~# _',
 }
 
 const links = [
@@ -58,14 +58,14 @@ export default function HomePage() {
         <div className="animate-slide-up opacity-0 delay-200 flex items-center gap-2 mb-6">
           <span className="font-mono text-accent-green text-sm">{'> '}</span>
           <p className="font-mono text-sm text-text-muted tracking-wide">
-            Cybersecurity Student & Builder
+            Learning Cybersecurity, Building Along the Way
           </p>
         </div>
 
         {/* Bio */}
         <p className="animate-slide-up opacity-0 delay-300 text-text-muted leading-relaxed mb-8 text-base max-w-lg">
-          I explore cybersecurity, build tools, and document what I learn.
-          Focused on solving real-world security problems and creating practical solutions.
+          I explore cybersecurity and document what i learn. 
+          Always experimenting and building something useful out of curiosity.
         </p>
 
         {/* Skill badges */}

@@ -3,7 +3,7 @@ import { getAllBlogs, formatDate } from '@/lib/blog-utils'
 import BlogCard from '@/components/BlogCard'
 
 export const metadata: Metadata = {
-  title: 'Blogs',
+  title: 'cytrus:~/blogs/# _',
   description: 'Security write-ups, CTF walkthroughs, and learning notes by Venkat Vellapalem.',
 }
 

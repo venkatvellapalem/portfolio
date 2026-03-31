@@ -50,8 +50,8 @@ export default function HomePage() {
 
         {/* Name */}
         <h1 className="animate-slide-up opacity-0 delay-100 font-sans text-4xl md:text-5xl lg:text-6xl font-semibold text-text leading-tight mb-4 tracking-tight">
-          Jyothi Venkat Reddy<br />
-          <span className="text-text-muted font-light">Vellapalem</span>
+          Vellapalem Jyothi Venkat Reddy<br />
+          <span className="text-text-muted font-light">Cytrus</span>
         </h1>
 
         {/* Role */}

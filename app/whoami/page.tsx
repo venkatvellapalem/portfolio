@@ -15,7 +15,7 @@ const certifications = [
 const skills = {
   'Security Domains': ['Network Security', 'VAPT', 'Bug Hunting', 'Digital Forensics', 'Incident Response', 'Threat Intelligence'],
   'Tools': ['Wireshark', 'Nmap', 'Burp Suite', 'Metasploit', 'Autopsy', 'Volatility', 'Splunk', 'Shodan'],
-  'Frameworks': ['OWASP Top 10', 'OSINT Framework', 'Log Analysis', 'Threat Hunting', 'SOAR'],
+  'Frameworks': ['OWASP Top 10', 'OSINT Framework', 'Log Analysis', 'Threat Hunting', 'SIEM', 'SOAR'],
 }
 
 const timeline = [
@@ -127,7 +127,7 @@ export default function AboutPage() {
               {[
                 '🥇 1st Place — CTF, MITS (Jan 2026)',
                 '📱 Contributor — India Mobile Congress 2024',
-                '🎯 Top 3% — TryHackMe',
+                '🎯 Top 2% — TryHackMe',
               ].map((item) => (
                 <li key={item} className="text-xs text-text-muted leading-relaxed">{item}</li>
               ))}

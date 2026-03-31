@@ -9,20 +9,20 @@ const links = [
   {
     href: 'https://venkatvellapalem.vercel.app/projects',
     label: 'Projects',
-    icon: '◈',
-    desc: 'Tools I\'ve built',
+    icon: '◄',
+    desc: 'Cool stuff I\'ve built',
   },
   {
     href: 'https://venkatvellapalem.vercel.app/blogs',
     label: 'Blogs',
-    icon: '◎',
-    desc: 'What I\'ve learned',
+    icon: '▲',
+    desc: 'Notes, writeups and learnings',
   },
   {
-    href: 'https://venkatvellapalem.vercel.app/portfolio',
+    href: 'https://venkatvellapalem.vercel.app/whoami',
     label: 'Portfolio',
-    icon: '◉',
-    desc: 'Full overview',
+    icon: '►',
+    desc: 'Background and current focus',
   },
 ]
 
@@ -64,7 +64,7 @@ export default function HomePage() {
 
         {/* Bio */}
         <p className="animate-slide-up opacity-0 delay-300 text-text-muted leading-relaxed mb-8 text-base max-w-lg">
-          I explore cybersecurity and document what i learn. 
+          I explore cybersecurity and document what i learn.<br />
           Always experimenting and building something useful out of curiosity.
         </p>
 

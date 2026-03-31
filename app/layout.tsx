@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   },
   description: 'Cybersecurity student & builder. Exploring security, building tools, documenting what I learn.',
   keywords: ['cybersecurity', 'security researcher', 'CTF', 'portfolio', 'OSINT'],
+    
+    icons: {
+  icon: [
+    { url: '/favicon.ico' },
+    { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+  ],
+  apple: [
+    { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+  ],
+},
+
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -31,9 +44,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className="min-h-screen flex flex-col relative z-10">
         <Navbar />
         <main className="flex-1">

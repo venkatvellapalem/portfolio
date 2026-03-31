@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ProjectCard from '@/components/ProjectCard'
 
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: 'cytrus:~/projects/# _',
   description: 'Security tools, research projects, and open-source contributions by Venkat Vellapalem.',
 }
 
@@ -17,7 +17,7 @@ export const projects = [
     github: 'https://github.com/venkatvellapalem/astra',
     demo: null,
     category: 'OSINT Tool',
-    status: 'Active',
+    status: 'Complete',
   },
   {
     title: 'Home Network SIEM — Wazuh',

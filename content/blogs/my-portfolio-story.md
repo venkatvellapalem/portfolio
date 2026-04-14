@@ -5,7 +5,7 @@ description: "Building my first personal portfolio, the struggles behind it, and
 tags: ["portfolio", "journey", "learning"]
 ---
 
-# Finally Built My Portfolio — Now What?
+# Finally Built My Portfolio - Now What?
 
 There’s something oddly satisfying about typing your own domain into a browser and seeing *your* work staring back at you.
 
@@ -41,7 +41,7 @@ The goal was simple:
 - No unnecessary noise  
 - Feels like *me*
 
-And yeah — I overthought everything:
+And yeah - I overthought everything:
 - spacing
 - colors
 - fonts
@@ -72,7 +72,7 @@ That’s the idea.
 
 ## The Reality Check
 
-Not gonna lie — it wasn’t smooth.
+Not gonna lie - it wasn’t smooth.
 
 There were moments where:
 - nothing looked right
@@ -92,7 +92,7 @@ Yeah. That hits.
 
 ## But Here’s the Thing
 
-Even with all that —
+Even with all that -
 
 This is the first time everything I’ve been doing:
 - learning

@@ -71,6 +71,7 @@ const categoryColors: Record<string, string> = {
   'Security Infra': 'text-blue-400 border-blue-400/30 bg-blue-400/5',
   'ML / Security': 'text-purple-400 border-purple-400/30 bg-purple-400/5',
   'Research': 'text-yellow-400 border-yellow-400/30 bg-yellow-400/5',
+  'Portfolio': 'text-pink-400 border-pink-400/30 bg-pink-400/5',
 }
 
 export default function ProjectsPage() {

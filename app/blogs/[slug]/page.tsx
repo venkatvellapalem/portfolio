@@ -5,7 +5,7 @@ import Link from 'next/link'
 import BlogContent from '@/components/BlogContent'
 
 interface PageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const blog = getBlogBySlug(params.slug)
+  const { slug } = await params
+  const blog = getBlogBySlug(slug)
   if (!blog) return { title: 'Not Found' }
   return {
     title: blog.title,
@@ -22,71 +23,60 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default function BlogPostPage({ params }: PageProps) {
-  const blog = getBlogBySlug(params.slug)
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params
+  const blog = getBlogBySlug(slug)
 
   if (!blog) notFound()
 
   return (
-    <div className="max-w-2xl mx-auto px-6 pt-28 pb-16">
+    <main className="min-h-screen bg-black text-green-400 px-6 py-16 max-w-3xl mx-auto font-mono">
 
       {/* Back */}
-      <Link
-        href="/blogs"
-        className="inline-flex items-center gap-2 font-mono text-xs text-text-dim hover:text-accent-green transition-colors mb-10 group"
-      >
-        <span className="group-hover:-translate-x-1 transition-transform">←</span>
-        all posts
+      <Link href="/blogs" className="text-green-600 hover:text-green-400 text-sm mb-8 inline-block">
+        ← all posts
       </Link>
 
       {/* Meta */}
-      <header className="mb-10">
+      <header className="mb-8">
         {blog.tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mb-4">
+          <div className="flex flex-wrap gap-2 mb-4">
             {blog.tags.map((tag) => (
-              <span
-                key={tag}
-                className="font-mono text-xs px-2 py-0.5 rounded border border-accent-green/20 text-accent-green/70 bg-accent-green/5"
-              >
+              <span key={tag} className="text-xs bg-green-900/40 text-green-400 px-2 py-0.5 rounded">
                 #{tag}
               </span>
             ))}
           </div>
         )}
 
-        <h1 className="text-3xl font-semibold text-text mb-4 leading-tight">
+        <h1 className="text-3xl font-bold text-green-300 mb-2">
           {blog.title}
         </h1>
 
-        <div className="flex items-center gap-4">
-          <span className="font-mono text-xs text-text-dim">{formatDate(blog.date)}</span>
-          <span className="text-border">·</span>
-          <span className="font-mono text-xs text-text-dim">{blog.readingTime}</span>
-        </div>
+        <p className="text-sm text-green-600">
+          {formatDate(blog.date)} · {blog.readingTime}
+        </p>
 
         {blog.description && (
-          <p className="mt-4 text-text-muted leading-relaxed border-l-2 border-accent-green/30 pl-4 italic">
+          <p className="text-green-500 mt-3">
             {blog.description}
           </p>
         )}
       </header>
 
       {/* Divider */}
-      <div className="border-t border-border mb-10" />
+      <hr className="border-green-900 mb-8" />
 
       {/* Content */}
       <BlogContent content={blog.content} />
 
       {/* Footer */}
-      <div className="mt-16 pt-8 border-t border-border">
-        <Link
-          href="/blogs"
-          className="inline-flex items-center gap-2 font-mono text-xs text-text-dim hover:text-accent-green transition-colors group"
-        >
-          <span className="group-hover:-translate-x-1 transition-transform">←</span>
-          back to all posts
+      <footer className="mt-16 pt-8 border-t border-green-900">
+        <Link href="/blogs" className="text-green-600 hover:text-green-400 text-sm">
+          ← back to all posts
         </Link>
-      </div>
-    </div>
+      </footer>
+
+    </main>
   )
 }

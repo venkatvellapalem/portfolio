@@ -27,7 +27,6 @@ export const teamMembers: TeamMember[] = [
   { name: "cytrus.exe", ctftimeUrl: "https://ctftime.org/user/205736" },
   { name: "leesec", ctftimeUrl: "https://ctftime.org/user/247716" },
   { name: "Pinaka", ctftimeUrl: "https://ctftime.org/user/252758" },
-  { name: "jathine", ctftimeUrl: "https://ctftime.org/user/253817" },
 ];
 
 // ═══════════════════════════════════════════════════════════
@@ -95,7 +94,7 @@ export const ctfEvents: CTFEvent[] = [
   {
     year: 2026,
     event: "DFIR Supraja Technologies CTF",
-    ratingPoints: 17.4,
+    ratingPoints: 12.5,
     place: 1,
     ctftimeEventUrl: "https://drive.google.com/file/d/1yTVej9qP3Tosly30r4ehMGQ_z_w2RMDT/view?usp=sharing",
     source: "manual",

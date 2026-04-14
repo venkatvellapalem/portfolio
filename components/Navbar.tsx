@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/whoami', label: 'WHOAMI' },
   { href: '/projects', label: 'Projects' },
   { href: '/blogs', label: 'Blogs' },
+  { href: '/ctfs', label: 'CTFs' },
   { href: '/contact', label: 'Contact' },
 ]
 

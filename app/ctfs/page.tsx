@@ -189,9 +189,9 @@ export default function CTFsPage() {
                     ) : (
                       <span className="text-text">{event.event}</span>
                     )}
-                    {event.source === 'manual' && (
+                    {event.source === 'offline' && (
                       <span className="ml-2 text-[10px] font-mono text-accent-blue bg-accent-blue/10 px-1.5 py-0.5 rounded">
-                        manual
+                        offline
                       </span>
                     )}
                   </td>

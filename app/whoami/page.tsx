@@ -92,7 +92,7 @@ export default function AboutPage() {
         <p className="font-mono text-xs text-accent-green tracking-widest uppercase mb-3">~/whoami</p>
         <h1 className="text-3xl md:text-4xl font-semibold text-text mb-4">About Me</h1>
         <p className="text-text-muted max-w-xl leading-relaxed">
-          Cybersecurity student from Nellore, Andhra Pradesh — currently pursuing B.Tech in CS with a specialization in Cybersecurity. I&apos;m drawn to the intersection of security and systems — finding vulnerabilities, building defensive tools, and understanding how things break.
+          Cybersecurity student from Andhra Pradesh, India — currently pursuing B.Tech in CS with a specialization in Cybersecurity. I&apos;m drawn to the intersection of security and systems — finding vulnerabilities, building defensive tools, and understanding how things break.
         </p>
       </div>
 

@@ -91,9 +91,7 @@ export default function HomePage() {
           {links.map(({ href, label, icon, desc }) => (
             <Link
               key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={href.replace('https://venkatvellapalem.vercel.app', '')}
               className="group flex items-center gap-3 px-4 py-3 rounded-lg border border-border bg-bg-secondary/30 hover:border-accent-green/40 hover:bg-accent-green/5 transition-all duration-200 card-hover"
             >
               <span className="text-accent-green font-mono text-base group-hover:scale-110 transition-transform">

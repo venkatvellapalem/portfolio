@@ -54,6 +54,11 @@ export default function BlogContent({ content }: BlogContentProps) {
     // Horizontal rule
     result = result.replace(/^---$/gm,
       '<hr style="border:none;border-top:1px solid #1e293b;margin:2rem 0;" />')
+    // Images (IMPORTANT - add before links)
+    result = result.replace(
+      /!\[([^\]]*)\]\(([^)]+)\)/g,
+      '<a href="$2" target="_blank"><img src="$2" alt="$1" style="display:block;margin:2rem auto;border-radius:12px;border:1px solid #1e293b;max-width:100%;height:auto;" /></a>'
+    )
 
     // Links
     result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g,

@@ -4,9 +4,7 @@ date: "2026-04-14"
 description: "Building my first personal portfolio, the struggles behind it, and why documenting the journey matters."
 tags: ["portfolio", "journey", "learning"]
 ---
-<p align="center">
-  <img src="/public/blog/preview.png" alt="Portfolio Preview" width="900"/>
-</p>
+![Portfolio Preview](/blog/preview.png)
 # Finally Built My Portfolio - Now What?
 
 There’s something oddly satisfying about typing your own domain into a browser and seeing *your* work staring back at you.

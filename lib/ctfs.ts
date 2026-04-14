@@ -7,7 +7,7 @@ export interface CTFEvent {
   ratingPoints: number;
   place: number;
   ctftimeEventUrl?: string;
-  source: "ctftime" | "manual";
+  source: "ctftime" | "offline";
 }
 
 export interface TeamMember {
@@ -89,7 +89,7 @@ export const ctfEvents: CTFEvent[] = [
     ratingPoints: 17.4,
     place: 8,
     ctftimeEventUrl: "https://drive.google.com/file/d/1KC3yFDRBZ7OnQRmjml6LtA4NZGpeLMLc/view?usp=sharing",
-    source: "manual",
+    source: "offline",
   },
   {
     year: 2026,
@@ -97,7 +97,7 @@ export const ctfEvents: CTFEvent[] = [
     ratingPoints: 12.5,
     place: 1,
     ctftimeEventUrl: "https://drive.google.com/file/d/1yTVej9qP3Tosly30r4ehMGQ_z_w2RMDT/view?usp=sharing",
-    source: "manual",
+    source: "offline",
   },
 
   // ══════════════════════════════════════════════════════

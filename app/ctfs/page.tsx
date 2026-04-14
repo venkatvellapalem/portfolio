@@ -51,10 +51,10 @@ export default function CTFsPage() {
   return (
     <div className="relative z-10 mx-auto max-w-5xl px-6 pt-28 pb-16 animate-fade-in">
       {/* Header */}
-      <div className="mb-10">
-        <p className="font-mono text-xs text-text-muted tracking-wider mb-3">~/ctfs</p>
-        <h1 className="text-3xl font-bold text-text mb-1">CTFs</h1>
-        <p className="text-text-muted text-sm">
+      <div className="mb-12">
+        <p className="font-mono text-xs text-accent-green tracking-widest uppercase mb-3">~/ctfs</p>
+        <h1 className="text-3xl md:text-4xl font-semibold text-text mb-4">Capture The Flag Dashboard</h1>
+        <p className="text-text-muted max-w-lg">
           Capture The Flag competition history for{' '}
           <a
             href={teamInfo.ctftimeUrl}

@@ -111,6 +111,9 @@ export default function HomePage() {
             <Link href="/whoami" className="font-mono text-xs text-text-dim hover:text-accent-green transition-colors hover-underline">
               /whoami
             </Link>
+            <Link href="/ctfs" className="font-mono text-xs text-text-dim hover:text-accent-green transition-colors hover-underline">
+              /CTFs
+            </Link>
             <Link href="/projects" className="font-mono text-xs text-text-dim hover:text-accent-green transition-colors hover-underline">
               /projects
             </Link>

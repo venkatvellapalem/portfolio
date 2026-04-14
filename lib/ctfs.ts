@@ -92,6 +92,14 @@ export const ctfEvents: CTFEvent[] = [
     ctftimeEventUrl: "https://drive.google.com/file/d/1KC3yFDRBZ7OnQRmjml6LtA4NZGpeLMLc/view?usp=sharing",
     source: "manual",
   },
+  {
+    year: 2026,
+    event: "DFIR Supraja Technologies CTF",
+    ratingPoints: 17.4,
+    place: 1,
+    ctftimeEventUrl: "https://drive.google.com/file/d/1yTVej9qP3Tosly30r4ehMGQ_z_w2RMDT/view?usp=sharing",
+    source: "manual",
+  },
 
   // ══════════════════════════════════════════════════════
   // ── Manual entries — ADD YOUR OWN HERE ──

@@ -14,7 +14,7 @@ const links = [
   },
   {
     href: 'https://venkatvellapalem.vercel.app/ctfs',
-    label: 'Capture The Flag Dashboard',
+    label: 'CTFs',
     icon: '▲',
     desc: 'The Learning Arc',
   },

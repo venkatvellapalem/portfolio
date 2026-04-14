@@ -14,8 +14,8 @@ type SortDir = 'asc' | 'desc'
 export default function CTFsPage() {
   const years = getYears(ctfEvents)
   const [selectedYear, setSelectedYear] = useState<number | 'all'>('all')
-  const [sortKey, setSortKey] = useState<SortKey>('ratingPoints')
-  const [sortDir, setSortDir] = useState<SortDir>('desc')
+  const [sortKey, setSortKey] = useState<SortKey>('place')
+  const [sortDir, setSortDir] = useState<SortDir>('asc')
 
   const filteredEvents = useMemo(() => {
     let events =

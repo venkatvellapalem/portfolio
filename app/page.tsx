@@ -38,7 +38,6 @@ const badges = [
   'CTF Player',
   'OSINT',
   'VAPT',
-  'Threat Hunting',
 ]
 
 export default function HomePage() {

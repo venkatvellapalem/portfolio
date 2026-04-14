@@ -6,10 +6,21 @@ export const metadata: Metadata = {
 }
 
 const certifications = [
-  'Google Cybersecurity Professional',
-  'ISC2 Certified in Cybersecurity (CC)',
-  'Cisco CyberOps Associate',
-  'CompTIA Security+ (In Progress)',
+  {
+    name: 'Google Cybersecurity Professional',
+    href: 'https://www.coursera.org/account/accomplishments/professional-cert/LK1RTWRXNH84',
+  },
+  {
+    name: 'ISC2 Certified in Cybersecurity (CC)',
+    href: 'https://drive.google.com/file/d/1ILrtnRctNZ35ds9jJkscNO8CPhRUFAHT/view?usp=sharing',
+  },
+  {
+    name: 'Cisco CyberOps Associate',
+    href: 'https://www.credly.com/badges/b4a9a74d-46fa-41ef-b952-be29114c176b/public_url',
+  },
+  {
+    name: 'CompTIA Security+ (In Progress)',
+  },
 ]
 
 const skills = {
@@ -113,8 +124,21 @@ export default function AboutPage() {
             <p className="font-mono text-xs text-accent-green mb-3 tracking-widest">CERTIFICATIONS</p>
             <ul className="space-y-2">
               {certifications.map((cert) => (
-                <li key={cert} className="text-xs text-text-muted font-mono leading-relaxed">
-                  <span className="text-accent-green">✓</span> {cert}
+                <li key={cert.name} className="text-xs text-text-muted font-mono leading-relaxed">
+                  <span className="text-accent-green">✓</span>{' '}
+    
+                  {cert.href ? (
+                    <a
+                      href={cert.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent-green transition-colors underline-offset-2 hover:underline"
+                    >
+                      {cert.name}
+                    </a>
+                  ) : (
+                    <span className="text-text-muted">{cert.name}</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -125,9 +149,9 @@ export default function AboutPage() {
             <p className="font-mono text-xs text-accent-green mb-3 tracking-widest">HONORS</p>
             <ul className="space-y-2">
               {[
-                '🥇 1st Place — CTF, MITS (Jan 2026)',
-                '📱 Contributor — India Mobile Congress 2024',
-                '🎯 Top 2% — TryHackMe',
+                '1st Place — CTF, MITS (Jan 2026)',
+                'Contributor — India Mobile Congress 2024',
+                'Top 2% — TryHackMe',
               ].map((item) => (
                 <li key={item} className="text-xs text-text-muted leading-relaxed">{item}</li>
               ))}

@@ -17,10 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params
   const blog = getBlogBySlug(slug)
   if (!blog) return { title: 'Not Found' }
-  return {
-    title: blog.title,
-    description: blog.description,
-  }
+  return { title: blog.title, description: blog.description }
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
@@ -30,53 +27,73 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!blog) notFound()
 
   return (
-    <main className="min-h-screen bg-black text-green-400 px-6 py-16 max-w-3xl mx-auto font-mono">
+    <main className="min-h-screen relative z-10">
+      {/* Top bar with back link */}
+      <div className="max-w-3xl mx-auto px-6 pt-12 pb-4">
+        <Link
+          href="/blogs"
+          className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors group"
+        >
+          <span className="group-hover:-translate-x-1 transition-transform">←</span>
+          <span className="font-mono text-xs">cd ../blogs</span>
+        </Link>
+      </div>
 
-      {/* Back */}
-      <Link href="/blogs" className="text-green-600 hover:text-green-400 text-sm mb-8 inline-block">
-        ← all posts
-      </Link>
-
-      {/* Meta */}
-      <header className="mb-8">
+      {/* Hero header */}
+      <header className="max-w-3xl mx-auto px-6 pb-10 border-b border-[#1e293b]">
+        {/* Tags */}
         {blog.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-5">
             {blog.tags.map((tag) => (
-              <span key={tag} className="text-xs bg-green-900/40 text-green-400 px-2 py-0.5 rounded">
+              <span
+                key={tag}
+                className="text-xs font-mono px-2.5 py-1 rounded-full border border-[#22c55e]/20 text-[#22c55e]/80 bg-[#22c55e]/5"
+              >
                 #{tag}
               </span>
             ))}
           </div>
         )}
 
-        <h1 className="text-3xl font-bold text-green-300 mb-2">
+        {/* Title */}
+        <h1 className="text-3xl sm:text-4xl font-bold text-[#e2e8f0] leading-tight mb-4 tracking-tight"
+            style={{ fontFamily: "'Sora', system-ui, sans-serif" }}>
           {blog.title}
         </h1>
 
-        <p className="text-sm text-green-600">
-          {formatDate(blog.date)} · {blog.readingTime}
-        </p>
+        {/* Meta line */}
+        <div className="flex items-center gap-3 text-sm text-[#94a3b8] font-mono">
+          <time>{formatDate(blog.date)}</time>
+          <span className="text-[#22c55e]/40">•</span>
+          <span>{blog.readingTime}</span>
+        </div>
 
+        {/* Description */}
         {blog.description && (
-          <p className="text-green-500 mt-3">
+          <p className="mt-5 text-[#94a3b8] text-base leading-relaxed max-w-2xl">
             {blog.description}
           </p>
         )}
       </header>
 
-      {/* Divider */}
-      <hr className="border-green-900 mb-8" />
-
-      {/* Content */}
-      <BlogContent content={blog.content} />
+      {/* Blog content */}
+      <article className="max-w-3xl mx-auto px-6 py-12">
+        <BlogContent content={blog.content} />
+      </article>
 
       {/* Footer */}
-      <footer className="mt-16 pt-8 border-t border-green-900">
-        <Link href="/blogs" className="text-green-600 hover:text-green-400 text-sm">
-          ← back to all posts
-        </Link>
+      <footer className="max-w-3xl mx-auto px-6 pb-16">
+        <div className="border-t border-[#1e293b] pt-8 flex items-center justify-between">
+          <Link
+            href="/blogs"
+            className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors group"
+          >
+            <span className="group-hover:-translate-x-1 transition-transform">←</span>
+            back to all posts
+          </Link>
+          <span className="text-xs text-[#94a3b8]/40 font-mono">EOF</span>
+        </div>
       </footer>
-
     </main>
   )
 }

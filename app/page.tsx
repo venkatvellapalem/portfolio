@@ -13,15 +13,21 @@ const links = [
     desc: 'Cool stuff I\'ve built',
   },
   {
+    href: 'https://venkatvellapalem.vercel.app/ctfs',
+    label: 'Capture The Flag Dashboard',
+    icon: '▲',
+    desc: 'The Learning Arc',
+  },
+  {
     href: 'https://venkatvellapalem.vercel.app/blogs',
     label: 'Blogs',
-    icon: '▲',
+    icon: '►',
     desc: 'Notes, writeups and learnings',
   },
   {
     href: 'https://venkatvellapalem.vercel.app/whoami',
     label: 'Portfolio',
-    icon: '►',
+    icon: '▼',
     desc: 'Background and current focus',
   },
 ]

@@ -84,6 +84,14 @@ export const ctfEvents: CTFEvent[] = [
     ctftimeEventUrl: "https://ctftime.org/event/3086",
     source: "ctftime",
   },
+  {
+    year: 2026,
+    event: "XploitX 2026",
+    ratingPoints: 17.4,
+    place: 8,
+    ctftimeEventUrl: "https://drive.google.com/file/d/1KC3yFDRBZ7OnQRmjml6LtA4NZGpeLMLc/view?usp=sharing",
+    source: "manual",
+  },
 
   // ══════════════════════════════════════════════════════
   // ── Manual entries — ADD YOUR OWN HERE ──

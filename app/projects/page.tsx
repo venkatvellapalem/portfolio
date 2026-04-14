@@ -20,6 +20,18 @@ export const projects = [
     status: 'Complete',
   },
   {
+    title: 'Personal Portfolio',
+    description:
+      'My personal cybersecurity portfolio showcasing projects, CTF journey, blogs, and learning arc.',
+    longDesc:
+      'Built with Next.js and TailwindCSS, designed with a minimal linux-style interface. Continuously updated with projects, CTF stats, blogs and technical writeups.',
+    tech: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
+    github: 'https://github.com/venkatvellapalem/portfolio',
+    demo: 'https://venkatvellapalem.vercel.app',
+    category: 'Portfolio',
+    status: 'Active',
+  },
+  {
     title: 'Home Network SIEM — Wazuh',
     description:
       'Deployed Wazuh SIEM on Linux managing two endpoints with centralized monitoring, File Integrity Monitoring, and automated compliance scans to detect unauthorized modifications.',

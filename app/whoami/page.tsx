@@ -151,7 +151,7 @@ export default function AboutPage() {
               {[
                 '1st Place — CTF, MITS (Jan 2026)',
                 'Contributor — India Mobile Congress 2024',
-                'Top 2% — TryHackMe',
+                'Top 1% — TryHackMe',
               ].map((item) => (
                 <li key={item} className="text-xs text-text-muted leading-relaxed">{item}</li>
               ))}

@@ -33,7 +33,7 @@ const contacts = [
   },
   {
     label: 'TryHackMe',
-    value: 'Top 2% globally',
+    value: 'Top 1% globally',
     href: 'https://tryhackme.com/p/venkatvellapalem',
     desc: 'CTF & security challenges platform',
     svg: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',
@@ -49,7 +49,7 @@ export default function ContactPage() {
         <h1 className="text-3xl md:text-4xl font-semibold text-text mb-4">Get in Touch</h1>
         <p className="text-text-muted max-w-lg">
           Open to internships, research collaborations, CTF teams, and interesting security conversations.
-          Reach out — I usually reply within a day.
+          Reach out - I usually reply within a day.
         </p>
       </div>
 

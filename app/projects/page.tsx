@@ -32,6 +32,25 @@ export const projects = [
     status: 'Active',
   },
   {
+  title: 'ShadowLink',
+  description:
+    'AI-powered phishing detection browser extension that analyzes URLs in real time, detects phishing indicators, and warns users before visiting malicious websites.',
+  longDesc:
+    'Built a modern cybersecurity browser extension capable of detecting homoglyph attacks, suspicious domains, fake login pages, shortened URLs, and malicious phishing indicators using heuristic analysis and threat intelligence APIs. Features include real-time risk scoring, phishing warning overlays, screenshot evidence capture, PDF investigation report generation, and optional AI-assisted threat explanations for enhanced user awareness and security analysis.',
+  tech: [
+    'JavaScript',
+    'Chrome Extension API',
+    'Manifest V3',
+    'TailwindCSS',
+    'VirusTotal API',
+    'jsPDF',
+  ],
+  github: 'https://github.com/venkatvellapalem/ShadowLink/',
+  demo: null,
+  category: 'Threat Intelligence',
+  status: 'Active',
+},
+  {
     title: 'Home Network SIEM — Wazuh',
     description:
       'Deployed Wazuh SIEM on Linux managing two endpoints with centralized monitoring, File Integrity Monitoring, and automated compliance scans to detect unauthorized modifications.',
@@ -72,6 +91,7 @@ const categoryColors: Record<string, string> = {
   'ML / Security': 'text-purple-400 border-purple-400/30 bg-purple-400/5',
   'Research': 'text-yellow-400 border-yellow-400/30 bg-yellow-400/5',
   'Portfolio': 'text-pink-400 border-pink-400/30 bg-pink-400/5',
+  'Threat Intelligence': 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5'
 }
 
 export default function ProjectsPage() {

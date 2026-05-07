@@ -40,7 +40,7 @@ export default function Navbar() {
           <span className="font-mono text-accent-green text-sm font-medium">
             {'> '}
           </span>
-          <span className="font-mono text-[#ff025a] text-sm font-medium tracking-wider group-hover:text-accent-green transition-colors">
+          <span className="font-mono text-[#d4af37] text-sm font-medium tracking-wider group-hover:text-accent-green transition-colors">
             venkat<span className="text-accent-green">.</span>
           </span>
         </Link>

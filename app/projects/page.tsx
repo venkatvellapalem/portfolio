@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 // --- Add your projects here ---
-export const projects = [
+const projects = [
   {
     title: 'Astra',
     description:
@@ -27,12 +27,12 @@ export const projects = [
       'Built with Next.js and TailwindCSS, designed with a minimal linux-style interface. Continuously updated with projects, CTF stats, blogs and technical writeups.',
     tech: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
     github: 'https://github.com/venkatvellapalem/portfolio',
-    demo: 'https://venkatvellapalem.vercel.app',
+    demo: null,
     category: 'Portfolio',
     status: 'Active',
   },
   {
-    title: 'Home Network SIEM — Wazuh',
+    title: 'Home Network SIEM - Wazuh',
     description:
       'Deployed Wazuh SIEM on Linux managing two endpoints with centralized monitoring, File Integrity Monitoring, and automated compliance scans to detect unauthorized modifications.',
     longDesc: 'Developed custom monitoring rules for endpoint browsing activity analysis, behavior pattern assessment, and anomaly detection. Includes log analysis and event correlation for real-time threat detection.',
@@ -45,7 +45,7 @@ export const projects = [
   {
     title: 'AI Fraud Detection System',
     description:
-      'Machine learning model to detect fraudulent SWIFT banking transactions using optimized classification models — KNN and Random Forest — achieving ~81% accuracy.',
+      'Machine learning model to detect fraudulent SWIFT banking transactions using optimized classification models - KNN and Random Forest - achieving ~81% accuracy.',
     longDesc: 'Used GridSearchCV hyperparameter tuning to optimize models on imbalanced transaction datasets. Achieved enhanced ROC-AUC and F1-scores. Focuses on reducing false negatives in financial fraud detection.',
     tech: ['Python', 'Scikit-learn', 'KNN', 'Random Forest', 'Machine Learning'],
     github: 'https://github.com/venkatvellapalem/ai-fraud-detection',
@@ -105,10 +105,13 @@ export default function ProjectsPage() {
       <div className="grid md:grid-cols-2 gap-4">
         {projects.map((project) => (
           <ProjectCard
-            key={project.title}
-            project={project}
-            categoryColors={categoryColors}
-          />
+  key={project.title}
+  title={project.title}
+  description={project.description}
+  href={project.github || "#"}
+  tags={project.tech}
+  year={project.status}
+/>
         ))}
       </div>
 

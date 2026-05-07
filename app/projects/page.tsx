@@ -91,7 +91,7 @@ const categoryColors: Record<string, string> = {
   'ML / Security': 'text-purple-400 border-purple-400/30 bg-purple-400/5',
   'Research': 'text-yellow-400 border-yellow-400/30 bg-yellow-400/5',
   'Portfolio': 'text-pink-400 border-pink-400/30 bg-pink-400/5',
-  'Threat Intelligence': 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5'
+  'Threat Intelligence': 'text-red-400 border-red-400/30 bg-red-400/5'
 }
 
 export default function ProjectsPage() {

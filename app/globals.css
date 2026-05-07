@@ -30,7 +30,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle grid background */
+
+/* Subtle grid background 
 body::before {
   content: '';
   position: fixed;
@@ -45,6 +46,7 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
+*/
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -165,3 +167,38 @@ pre code {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+
+/*
+===== REMOVE OLD GRID / LINE BACKGROUNDS ===== 
+
+.bg-grid,
+.bg-grid-white,
+.bg-grid-small,
+.bg-dot,
+.bg-dots,
+.bg-lines,
+.grid-overlay,
+.grid-background,
+.cyber-grid,
+.cyber-lines {
+  background-image: none !important;
+}
+
+
+body::before,
+body::after,
+main::before,
+main::after,
+section::before,
+section::after,
+div::before,
+div::after {
+  background-image: none !important;
+}
+
+
+[style*="linear-gradient"],
+[style*="radial-gradient"] {
+  background-image: none !important;
+}
+*/

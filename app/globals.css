@@ -14,7 +14,7 @@
   --accent: #2dd4bf;
   --accent-soft: rgba(45, 212, 191, 0.18);
 
-  --accent-blue: #22d3ee;
+  --accent-blue: #22c55e;
 
   --border: rgba(255,255,255,0.06);
 }
@@ -126,7 +126,7 @@ body::before {
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #22d3ee;
+  background: #22c55e;
 }
 
 
@@ -178,7 +178,7 @@ body::before {
 .cursor::after {
   content: '_';
   animation: blink 1s step-end infinite;
-  color: #22d3ee;}
+  color: #22c55e;}
 
 /* Link hover underline animation */
 .hover-underline {
@@ -191,7 +191,7 @@ body::before {
   left: 0;
   width: 0;
   height: 1px;
-  background: #22d3ee;
+  background: #22c55e;
   transition: width 0.3s ease;
 }
 .hover-underline:hover::after {
@@ -354,3 +354,17 @@ pre code {
   opacity: 0.78;
 }
 
+/* Force all cyan accents to neon green */
+
+a:hover,
+.active,
+.text-cyan-400,
+.border-cyan-400 {
+  color: #22c55e !important;
+  border-color: #22c55e !important;
+}
+
+::selection {
+  background: #22c55e;
+  color: #04130a;
+}

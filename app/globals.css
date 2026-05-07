@@ -231,3 +231,82 @@ pre code {
   -webkit-backdrop-filter: blur(12px);
 }
 
+/* ===== Peaceful blog reading mode ===== */
+
+.blog-page {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Remove cinematic overlays */
+.blog-page::before,
+.blog-page::after {
+  display: none !important;
+}
+
+/* Header */
+.blog-page header {
+  border-color: #e2e8f0 !important;
+}
+
+/* Footer */
+.blog-page footer div {
+  border-color: #e2e8f0 !important;
+}
+
+/* Title */
+.blog-page h1,
+.blog-page h2,
+.blog-page h3,
+.blog-page h4 {
+  color: #020617 !important;
+}
+
+/* Paragraphs */
+.blog-page p,
+.blog-page li {
+  color: #334155 !important;
+  line-height: 1.9;
+}
+
+/* Metadata */
+.blog-page time,
+.blog-page .font-mono,
+.blog-page span {
+  color: #64748b !important;
+}
+
+/* Links */
+.blog-page a {
+  color: #0891b2 !important;
+}
+
+/* Tags */
+.blog-page header span[class*="rounded-full"] {
+  border-color: rgba(8,145,178,0.15) !important;
+  background: rgba(8,145,178,0.05) !important;
+  color: #0891b2 !important;
+}
+
+/* Code blocks */
+.blog-page pre {
+  background: #e2e8f0 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.blog-page code {
+  color: #0f172a !important;
+}
+
+/* Softer article width feeling */
+.blog-page article {
+  max-width: 760px;
+}
+
+/* Subtle peaceful glow */
+.blog-page {
+  background-image:
+    radial-gradient(circle at top,
+      rgba(8,145,178,0.04),
+      transparent 35%);
+}

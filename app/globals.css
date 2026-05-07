@@ -68,6 +68,7 @@ body::before {
 }
 
 /* Dark cinematic vignette */
+/*
 body::after {
   content: "";
   position: fixed;
@@ -80,6 +81,7 @@ body::after {
       transparent 40%,
       rgba(0,0,0,0.88) 100%);
 }
+*/
 
 @keyframes networkFloat {
   0% {
@@ -127,7 +129,7 @@ body::before {
   background: #22d3ee;
 }
 
-/* Selection */
+
 ::selection {
   background: #4c1d95;
   color: #ffffff;

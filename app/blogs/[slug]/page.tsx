@@ -28,8 +28,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="blog-page min-h-screen relative z-10">
+      <div className="max-w-6xl mx-auto px-8">
       {/* Top bar with back link */}
-      <div className="max-w-3xl mx-auto px-6 pt-12 pb-4">
+      <div className="max-w-3xl pt-12 pb-4">
         <Link
           href="/blogs"
           className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors group"
@@ -40,7 +41,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       </div>
 
       {/* Hero header */}
-      <header className="max-w-3xl mx-auto px-6 pb-10 border-b border-[#1e293b]">
+      <header className="max-w-3xl pb-10 border-b border-[#d4d4d8]">
         {/* Tags */}
         {blog.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-5">
@@ -77,12 +78,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       </header>
 
       {/* Blog content */}
-      <article className="max-w-3xl mx-auto px-6 py-12">
+      <article className="max-w-3xl py-12">
         <BlogContent content={blog.content} />
       </article>
 
       {/* Footer */}
-      <footer className="max-w-3xl mx-auto px-6 pb-16">
+      <footer className="max-w-3xl pb-16">
         <div className="border-t border-[#1e293b] pt-8 flex items-center justify-between">
           <Link
             href="/blogs"
@@ -94,6 +95,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <span className="text-xs text-[#94a3b8]/40 font-mono">EOF</span>
         </div>
       </footer>
+      </div>
     </main>
   )
 }

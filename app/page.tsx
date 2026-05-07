@@ -42,8 +42,10 @@ const badges = [
 
 export default function HomePage() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
-      <div className="max-w-2xl w-full mx-auto">
+    <section className="min-h-screen px-6 pt-32">
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl">
+
 
         {/* Status badge */}
         <div className="animate-fade-in opacity-0 delay-100 flex items-center gap-2 mb-8">
@@ -116,6 +118,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

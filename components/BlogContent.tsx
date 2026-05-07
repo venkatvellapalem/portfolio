@@ -1,5 +1,5 @@
-import ReadingProgress from "@/app/blogs/ReadingProgress";
-import TableOfContents from "@/app/blogs/TableOfContents";
+import ReadingProgress from "@/components/blog/ReadingProgress";
+import TableOfContents from "@/components/blog/TableOfContents";
 
 type Props = {
   title: string;

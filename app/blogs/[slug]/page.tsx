@@ -28,7 +28,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="blog-page min-h-screen relative z-10">
-  <div className="max-w-[86ch] mx-auto px-6">
+  <div className="max-w-[64ch] mx-auto px-6">
       {/* Top bar with back link */}
       <div className="max-w-[78ch] pt-12 pb-4">
         <Link

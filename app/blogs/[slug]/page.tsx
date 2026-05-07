@@ -118,17 +118,9 @@ export default async function BlogPostPage({
             ← All posts
           </Link>
 
-          <button
-            onClick={() =>
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              })
-            }
-            className="nav-link"
-          >
-            Back to top ↑
-          </button>
+          <a href="#" className="nav-link">
+  Back to top ↑
+</a>
         </div>
       </main>
     </div>

@@ -129,10 +129,9 @@ body::before {
 
 /* Selection */
 ::selection {
-  background: rgba(34, 211, 238, 0.2);
-  color: #e2e8f0;
+  background: #4c1d95;
+  color: #ffffff;
 }
-
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -338,3 +337,18 @@ pre code {
       rgba(8,145,178,0.04),
       transparent 35%);
 }
+
+/* Purple emphasis for markdown bold */
+.blog-page strong,
+.blog-page b {
+  color: #6d28d9 !important;
+  font-weight: 700;
+}
+
+/* Elegant italic styling */
+.blog-page em,
+.blog-page i {
+  color: #7c3aed !important;
+  opacity: 0.78;
+}
+

@@ -40,7 +40,7 @@ export default function Navbar() {
           <span className="font-mono text-accent-green text-sm font-medium">
             {'> '}
           </span>
-          <span className="font-mono text-text text-sm font-medium tracking-wider group-hover:text-accent-green transition-colors">
+          <span className="font-mono text-[#0f172a] text-sm font-medium tracking-wider group-hover:text-accent-green transition-colors">
             venkat<span className="text-accent-green">.</span>
           </span>
         </Link>
@@ -54,7 +54,9 @@ export default function Navbar() {
                 <Link
                   href={href}
                   className={`font-mono text-xs tracking-widest uppercase transition-colors hover-underline
-                    ${isActive ? 'text-accent-green' : 'text-text-muted hover:text-text'}`}
+                    ${isActive 
+  ? 'text-accent-green' 
+  : 'text-[#64748b] hover:text-[#0f172a]'}`}
                 >
                   {label}
                 </Link>

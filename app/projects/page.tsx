@@ -9,29 +9,6 @@ export const metadata: Metadata = {
 // --- Add your projects here ---
 export const projects = [
   {
-    title: 'Astra',
-    description:
-      'Python CLI tool for law enforcement to automate social media monitoring and OSINT analysis. Reduces investigation time from hours to minutes through automated multi-platform data collection.',
-    longDesc: 'Implements both Active and Passive OSINT collection modes with multi-OS deployment capability. Automated data processing pipelines significantly reduce manual errors and improve investigative efficiency.',
-    tech: ['Python', 'OSINT', 'CLI', 'Multi-platform'],
-    github: 'https://github.com/venkatvellapalem/astra',
-    demo: null,
-    category: 'OSINT Tool',
-    status: 'Complete',
-  },
-  {
-    title: 'Personal Portfolio',
-    description:
-      'My personal cybersecurity portfolio showcasing projects, CTF journey, blogs, and learning arc.',
-    longDesc:
-      'Built with Next.js and TailwindCSS, designed with a minimal linux-style interface. Continuously updated with projects, CTF stats, blogs and technical writeups.',
-    tech: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
-    github: 'https://github.com/venkatvellapalem/portfolio',
-    demo: null,
-    category: 'Portfolio',
-    status: 'Active',
-  },
-  {
   title: 'ShadowLink',
   description:
     'AI-powered phishing detection browser extension that analyzes URLs in real time, detects phishing indicators, and warns users before visiting malicious websites.',
@@ -50,6 +27,29 @@ export const projects = [
   category: 'Threat Intelligence',
   status: 'Active',
 },
+  {
+    title: 'Personal Portfolio',
+    description:
+      'My personal cybersecurity portfolio showcasing projects, CTF journey, blogs, and learning arc.',
+    longDesc:
+      'Built with Next.js and TailwindCSS, designed with a minimal linux-style interface. Continuously updated with projects, CTF stats, blogs and technical writeups.',
+    tech: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
+    github: 'https://github.com/venkatvellapalem/portfolio',
+    demo: null,
+    category: 'Portfolio',
+    status: 'Active',
+  },
+{
+    title: 'Astra',
+    description:
+      'Python CLI tool for law enforcement to automate social media monitoring and OSINT analysis. Reduces investigation time from hours to minutes through automated multi-platform data collection.',
+    longDesc: 'Implements both Active and Passive OSINT collection modes with multi-OS deployment capability. Automated data processing pipelines significantly reduce manual errors and improve investigative efficiency.',
+    tech: ['Python', 'OSINT', 'CLI', 'Multi-platform'],
+    github: 'https://github.com/venkatvellapalem/astra',
+    demo: null,
+    category: 'OSINT Tool',
+    status: 'Complete',
+  },
   {
     title: 'Home Network SIEM — Wazuh',
     description:

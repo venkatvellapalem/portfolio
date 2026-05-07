@@ -45,7 +45,7 @@ export function getAllBlogs(): BlogMeta[] {
   description: data.description || '',
   tags: data.tags || [],
   readingTime: rt.text,
-  music: data.music || '',
+  music: typeof data.music === 'string' ? data.music : '',
   content,
   draft: data.draft || false,
 } as BlogMeta

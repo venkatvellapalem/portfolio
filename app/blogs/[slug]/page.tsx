@@ -26,7 +26,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const blog = getBlogBySlug(slug)
 
   if (!blog) notFound()
-
+console.log(blog)
   return (
     <main className="blog-page min-h-screen relative z-10">
       <BlogMusicPlayer src={blog.music} />

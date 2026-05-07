@@ -3,6 +3,7 @@ title: "I Said I’d Build It Later. I Lied. : My Portfolio Story"
 date: "2026-04-14"
 description: "Building my first personal portfolio, the struggles behind it, and why documenting the journey matters."
 tags: ["portfolio", "journey", "learning"]
+music: "/music/first.mp3"
 ---
 ![Portfolio Preview](/blog/preview1.png)
 # Finally Built My Portfolio - Now What?

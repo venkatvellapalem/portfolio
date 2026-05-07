@@ -12,6 +12,7 @@ export interface BlogMeta {
   description: string
   tags: string[]
   readingTime: string
+  music?: string
   draft?: boolean
 }
 
@@ -38,14 +39,16 @@ export function getAllBlogs(): BlogMeta[] {
       const rt = readingTime(content)
 
       return {
-        slug,
-        title: data.title || slug,
-        date: data.date || '',
-        description: data.description || '',
-        tags: data.tags || [],
-        readingTime: rt.text,
-        draft: data.draft || false,
-      } as BlogMeta
+  slug,
+  title: data.title || slug,
+  date: data.date || '',
+  description: data.description || '',
+  tags: data.tags || [],
+  readingTime: rt.text,
+  music: data.music || '',
+  content,
+  draft: data.draft || false,
+} as BlogMeta
     })
     .filter((b) => !b.draft)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { getBlogBySlug, getAllBlogs, formatDate } from '@/lib/blog-utils'
 import Link from 'next/link'
 import BlogContent from '@/components/BlogContent'
+import BlogMusicPlayer from '@/components/blog/BlogMusicPlayer'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -28,6 +29,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <main className="blog-page min-h-screen relative z-10">
+      <BlogMusicPlayer src={blog.music} />
   <div className="max-w-[64ch] mx-auto px-6">
       {/* Top bar with back link */}
       <div className="max-w-[78ch] pt-12 pb-4">

@@ -33,7 +33,7 @@ const contacts = [
   },
   {
     label: 'TryHackMe',
-    value: 'Top 1%% globally',
+    value: 'Top 1% globally',
     href: 'https://tryhackme.com/p/venkatvellapalem',
     desc: 'CTF & security challenges platform',
     svg: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',

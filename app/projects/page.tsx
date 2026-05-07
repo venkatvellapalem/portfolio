@@ -27,7 +27,7 @@ export const projects = [
       'Built with Next.js and TailwindCSS, designed with a minimal linux-style interface. Continuously updated with projects, CTF stats, blogs and technical writeups.',
     tech: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
     github: 'https://github.com/venkatvellapalem/portfolio',
-    demo: 'https://venkatvellapalem.vercel.app',
+    demo: null,
     category: 'Portfolio',
     status: 'Active',
   },

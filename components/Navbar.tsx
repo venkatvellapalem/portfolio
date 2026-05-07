@@ -1,104 +1,88 @@
-'use client'
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/whoami', label: 'WHOAMI' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/blogs', label: 'Blogs' },
-  { href: '/ctfs', label: 'CTFs' },
-  { href: '/contact', label: 'Contact' },
-]
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/whoami", label: "whoami" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blogs", label: "Blogs" },
+  { href: "/ctfs", label: "CTFs" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  const pathname = usePathname()
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileOpen(false)
-  }, [pathname])
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-blur
-        ${scrolled ? 'bg-bg/80 border-b border-border/50' : 'bg-transparent'}`}
-    >
-      <nav className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="font-mono text-accent-green text-sm font-medium">
-            {'> '}
-          </span>
-          <span className="font-mono text-text text-sm font-medium tracking-wider group-hover:text-accent-green transition-colors">
-            venkat<span className="text-accent-green">.</span>
-          </span>
+    <header className="fixed inset-x-0 top-0 z-40">
+      <div
+        className={`shell mt-4 flex items-center justify-between rounded-full px-5 py-3 transition-all duration-300 ${
+          scrolled ? "nav-glass shadow-elevated" : "bg-transparent"
+        }`}
+      >
+        <Link
+          href="/"
+          className="font-mono text-sm tracking-tight text-fg"
+          aria-label="Home"
+        >
+          <span className="text-accent">~$</span> venkat
         </Link>
 
-        {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map(({ href, label }) => {
-            const isActive = pathname === href
-            return (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={`font-mono text-xs tracking-widest uppercase transition-colors hover-underline
-                    ${isActive ? 'text-accent-green' : 'text-text-muted hover:text-text'}`}
-                >
-                  {label}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+          {links.slice(1).map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="nav-link text-sm"
+              data-active={pathname === l.href || pathname?.startsWith(l.href + "/")}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
 
-        {/* Mobile menu button */}
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-text-muted hover:text-text transition-colors p-1"
+          className="md:hidden text-fg-muted"
           aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
         >
-          <div className="w-5 flex flex-col gap-1.5">
-            <span className={`block h-px bg-current transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
-            <span className={`block h-px bg-current transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-px bg-current transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
-          </div>
+          <span className="block h-px w-6 bg-current" />
+          <span className="mt-1.5 block h-px w-6 bg-current" />
         </button>
-      </nav>
+      </div>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden border-t border-border/50 bg-bg/95 nav-blur">
-          <ul className="max-w-4xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {navLinks.map(({ href, label }) => {
-              const isActive = pathname === href
-              return (
-                <li key={href}>
+      {open && (
+        <div className="shell mt-2 md:hidden">
+          <div className="nav-glass rounded-2xl p-4">
+            <ul className="flex flex-col gap-3">
+              {links.slice(1).map((l) => (
+                <li key={l.href}>
                   <Link
-                    href={href}
-                    className={`font-mono text-xs tracking-widest uppercase transition-colors block py-1
-                      ${isActive ? 'text-accent-green' : 'text-text-muted hover:text-text'}`}
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="nav-link block py-1 text-base"
+                    data-active={pathname === l.href}
                   >
-                    <span className="text-accent-green mr-2">{'>'}</span>
-                    {label}
+                    {l.label}
                   </Link>
                 </li>
-              )
-            })}
-          </ul>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </header>
-  )
+  );
 }

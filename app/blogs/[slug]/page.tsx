@@ -1,99 +1,136 @@
-import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
-import { getBlogBySlug, getAllBlogs, formatDate } from '@/lib/blog-utils'
-import Link from 'next/link'
-import BlogContent from '@/components/BlogContent'
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Link from "next/link";
+
+import { getBlogBySlug, getAllBlogs, formatDate } from "@/lib/blog-utils";
+
+import BlogContent from "@/components/BlogContent";
+import ReadingProgress from "@/components/blog/ReadingProgress";
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const blogs = getAllBlogs()
-  return blogs.map((b) => ({ slug: b.slug }))
+  const blogs = getAllBlogs();
+
+  return blogs.map((b) => ({
+    slug: b.slug,
+  }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
-  const blog = getBlogBySlug(slug)
-  if (!blog) return { title: 'Not Found' }
-  return { title: blog.title, description: blog.description }
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const blog = getBlogBySlug(slug);
+
+  if (!blog) {
+    return {
+      title: "Not Found",
+    };
+  }
+
+  return {
+    title: blog.title,
+    description: blog.description,
+  };
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
-  const { slug } = await params
-  const blog = getBlogBySlug(slug)
+export default async function BlogPostPage({
+  params,
+}: PageProps) {
+  const { slug } = await params;
 
-  if (!blog) notFound()
+  const blog = getBlogBySlug(slug);
+
+  if (!blog) notFound();
 
   return (
-    <main className="min-h-screen relative z-10">
-      {/* Top bar with back link */}
-      <div className="max-w-3xl mx-auto px-6 pt-12 pb-4">
-        <Link
-          href="/blogs"
-          className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors group"
-        >
-          <span className="group-hover:-translate-x-1 transition-transform">←</span>
-          <span className="font-mono text-xs">cd ../blogs</span>
-        </Link>
-      </div>
+    <div className="min-h-screen">
+      <ReadingProgress />
 
-      {/* Hero header */}
-      <header className="max-w-3xl mx-auto px-6 pb-10 border-b border-[#1e293b]">
-        {/* Tags */}
-        {blog.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-5">
-            {blog.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-xs font-mono px-2.5 py-1 rounded-full border border-[#22c55e]/20 text-[#22c55e]/80 bg-[#22c55e]/5"
-              >
-                #{tag}
-              </span>
-            ))}
-          </div>
-        )}
-
-        {/* Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-[#e2e8f0] leading-tight mb-4 tracking-tight"
-            style={{ fontFamily: "'Sora', system-ui, sans-serif" }}>
-          {blog.title}
-        </h1>
-
-        {/* Meta line */}
-        <div className="flex items-center gap-3 text-sm text-[#94a3b8] font-mono">
-          <time>{formatDate(blog.date)}</time>
-          <span className="text-[#22c55e]/40">•</span>
-          <span>{blog.readingTime}</span>
-        </div>
-
-        {/* Description */}
-        {blog.description && (
-          <p className="mt-5 text-[#94a3b8] text-base leading-relaxed max-w-2xl">
-            {blog.description}
-          </p>
-        )}
-      </header>
-
-      {/* Blog content */}
-      <article className="max-w-3xl mx-auto px-6 py-12">
-        <BlogContent content={blog.content} />
-      </article>
-
-      {/* Footer */}
-      <footer className="max-w-3xl mx-auto px-6 pb-16">
-        <div className="border-t border-[#1e293b] pt-8 flex items-center justify-between">
+      <main className="shell py-24">
+        {/* Back link */}
+        <div className="mx-auto mb-12 max-w-[68ch]">
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#22c55e] transition-colors group"
+            className="nav-link inline-flex items-center gap-2 text-sm"
           >
-            <span className="group-hover:-translate-x-1 transition-transform">←</span>
-            back to all posts
+            ← Back to blogs
           </Link>
-          <span className="text-xs text-[#94a3b8]/40 font-mono">EOF</span>
         </div>
-      </footer>
-    </main>
-  )
+
+        <article className="prose-cyber mx-auto max-w-[68ch]">
+          {/* Tags */}
+          {blog.tags?.length > 0 && (
+            <div className="mb-6 flex flex-wrap gap-2">
+              {blog.tags.map((tag: string) => (
+                <span
+                  key={tag}
+                  className="font-mono text-[11px] uppercase tracking-wider text-fg-muted"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Title */}
+          <h1>{blog.title}</h1>
+
+          {/* Meta */}
+          <div className="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-fg-dim">
+            <time>{formatDate(blog.date)}</time>
+
+            {blog.readingTime && (
+              <>
+                <span>·</span>
+                <span>{blog.readingTime}</span>
+              </>
+            )}
+          </div>
+
+          {/* Description */}
+          {blog.description && (
+            <p className="text-lg text-fg-muted">
+              {blog.description}
+            </p>
+          )}
+
+          {/* Blog content */}
+          <BlogContent
+            title={blog.title}
+            date={formatDate(blog.date)}
+            readingTime={blog.readingTime}
+            tags={blog.tags}
+            html={blog.content}
+          />
+        </article>
+
+        {/* Footer nav */}
+        <div className="mx-auto mt-16 flex max-w-[68ch] justify-between text-sm text-fg-muted">
+          <Link
+            href="/blogs"
+            className="nav-link"
+          >
+            ← All posts
+          </Link>
+
+          <button
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
+            className="nav-link"
+          >
+            Back to top ↑
+          </button>
+        </div>
+      </main>
+    </div>
+  );
 }

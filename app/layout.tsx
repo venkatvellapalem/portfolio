@@ -1,56 +1,71 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import "./globals.css";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+// Re-export geist font variables so tokens in globals.css resolve.
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Venkat Vellapalem — Cybersecurity',
-    template: '%s',
-  },
-  description: 'Cybersecurity student & builder. Exploring security, building tools, documenting what I learn.',
-  keywords: ['cybersecurity', 'security researcher', 'CTF', 'portfolio', 'OSINT'],
-    
-    icons: {
-  icon: [
-    { url: '/favicon.ico' },
-    { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-  ],
-  apple: [
-    { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-  ],
-},
-
-  manifest: '/site.webmanifest',
+  title: "Venkat Vellapalem — Cybersecurity & Innovation",
+  description:
+    "Cybersecurity researcher, technical founder, and developer. Projects, writing, and CTFs.",
+  metadataBase: new URL("https://venkatvellapalem.vercel.app"),
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://venkatvellapalem.vercel.app',
-    title: 'Venkat Vellapalem — Cybersecurity',
-    description: 'Cybersecurity student & builder.',
-    siteName: 'Venkat Vellapalem',
+    title: "Venkat Vellapalem",
+    description: "Cybersecurity researcher, technical founder, and developer.",
+    type: "website",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+  twitter: { card: "summary_large_image" },
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body className="min-h-screen flex flex-col relative z-10">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body className="min-h-screen bg-bg text-fg antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-surface focus:px-3 focus:py-2"
+        >
+          Skip to content
+        </a>
         <Navbar />
-        <main className="flex-1">
+        <main id="main" className="pt-24">
           {children}
         </main>
         <Footer />
+
+        {/* Reveal-on-scroll, no dependency */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                if (typeof window === 'undefined') return;
+                var io = new IntersectionObserver(function(entries){
+                  entries.forEach(function(e){
+                    if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+                  });
+                }, { threshold: 0.12 });
+                var run = function(){ document.querySelectorAll('.reveal:not(.is-visible)').forEach(function(el){ io.observe(el); }); };
+                run();
+                new MutationObserver(run).observe(document.body, { childList: true, subtree: true });
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
-  )
+  );
 }

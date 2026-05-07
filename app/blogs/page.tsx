@@ -34,7 +34,15 @@ export default function BlogsPage() {
       ) : (
         <div className="space-y-4">
           {blogs.map((blog) => (
-            <BlogCard key={blog.slug} blog={blog} />
+            <BlogCard
+              key={blog.slug}
+              slug={blog.slug}
+              title={blog.title}
+              excerpt={blog.description}
+              date={formatDate(blog.date)}
+              readingTime={blog.readingTime}
+              tags={blog.tags}
+/>
           ))}
         </div>
       )}

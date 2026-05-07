@@ -59,8 +59,10 @@ export default async function BlogPostPage({ params }: PageProps) {
         )}
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-[#e2e8f0] leading-tight mb-4 tracking-tight"
-            style={{ fontFamily: "'Sora', system-ui, sans-serif" }}>
+        <h1
+  className="text-4xl sm:text-5xl font-bold text-[#e2e8f0] leading-tight mb-4 tracking-tight max-w-4xl"
+  style={{ fontFamily: "'Sora', system-ui, sans-serif" }}
+>
           {blog.title}
         </h1>
 
@@ -73,7 +75,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {/* Description */}
         {blog.description && (
-          <p className="mt-5 text-[#94a3b8] text-base leading-relaxed max-w-2xl">
+          <p className="mt-5 text-[#94a3b8] text-base leading-relaxed max-w-3xl">
             {blog.description}
           </p>
         )}

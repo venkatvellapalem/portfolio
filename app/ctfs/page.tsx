@@ -49,7 +49,7 @@ export default function CTFsPage() {
   }
 
   return (
-    <div className="relative z-10 mx-auto max-w-5xl px-6 pt-28 pb-16 animate-fade-in">
+    <div className="relative z-10 max-w-4xl mx-auto px-6 pt-28 pb-16 animate-fade-in">
       {/* Header */}
       <div className="mb-12">
         <p className="font-mono text-xs text-accent-green tracking-widest uppercase mb-3">~/ctfs</p>

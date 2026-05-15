@@ -11,7 +11,7 @@ export const projects = [
   {
   title: 'ShadowLink',
   description:
-    'AI-powered phishing detection browser extension that analyzes URLs in real time, detects phishing indicators, and warns users before visiting malicious websites.',
+    'Phishing detection browser extension that analyzes URLs in real time, detects phishing indicators, and warns users before visiting malicious websites.',
   longDesc:
     'Built a modern cybersecurity browser extension capable of detecting homoglyph attacks, suspicious domains, fake login pages, shortened URLs, and malicious phishing indicators using heuristic analysis and threat intelligence APIs. Features include real-time risk scoring, phishing warning overlays, screenshot evidence capture, PDF investigation report generation, and optional AI-assisted threat explanations for enhanced user awareness and security analysis.',
   tech: [
@@ -20,7 +20,6 @@ export const projects = [
     'Manifest V3',
     'TailwindCSS',
     'VirusTotal API',
-    'jsPDF',
   ],
   github: 'https://github.com/venkatvellapalem/ShadowLink/',
   demo: null,

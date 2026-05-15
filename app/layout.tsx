@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Venkat Vellapalem — Cybersecurity',
+    default: 'Venkat Vellapalem',
     template: '%s',
   },
   description: 'Cybersecurity student & builder. Exploring security, building tools, documenting what I learn.',

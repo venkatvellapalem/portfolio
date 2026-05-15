@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'cytrus:~/whoami/# _',
-  description: 'Learn more about Venkat Vellapalem — cybersecurity student, CTF player, and builder.',
+  description: 'Learn more about Venkat Vellapalem, student, CTF player, and builder.',
 }
 
 const certifications = [

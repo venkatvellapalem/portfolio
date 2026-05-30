@@ -50,7 +50,7 @@ export const projects = [
     status: 'Complete',
   },
   {
-    title: 'Home Network SIEM — Wazuh',
+    title: 'Home Network SIEM - Wazuh',
     description:
       'Deployed Wazuh SIEM on Linux managing two endpoints with centralized monitoring, File Integrity Monitoring, and automated compliance scans to detect unauthorized modifications.',
     longDesc: 'Developed custom monitoring rules for endpoint browsing activity analysis, behavior pattern assessment, and anomaly detection. Includes log analysis and event correlation for real-time threat detection.',
@@ -63,7 +63,7 @@ export const projects = [
   {
     title: 'AI Fraud Detection System',
     description:
-      'Machine learning model to detect fraudulent SWIFT banking transactions using optimized classification models — KNN and Random Forest — achieving ~81% accuracy.',
+      'Machine learning model to detect fraudulent SWIFT banking transactions using optimized classification models - KNN and Random Forest - achieving ~81% accuracy.',
     longDesc: 'Used GridSearchCV hyperparameter tuning to optimize models on imbalanced transaction datasets. Achieved enhanced ROC-AUC and F1-scores. Focuses on reducing false negatives in financial fraud detection.',
     tech: ['Python', 'Scikit-learn', 'KNN', 'Random Forest', 'Machine Learning'],
     github: 'https://github.com/venkatvellapalem/ai-fraud-detection',

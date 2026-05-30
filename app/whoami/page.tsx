@@ -31,42 +31,42 @@ const skills = {
 
 const timeline = [
   {
-    period: 'Aug 2023 — Present',
+    period: 'Aug 2023 - Present',
     title: 'B.Tech CSE (Cyber Security)',
     org: 'MITS Madanapalle',
-    desc: 'GPA: 8.0 — Building a strong foundation in security while pursuing real-world experience.',
+    desc: 'GPA: 8.0 - Building a strong foundation in security while pursuing real-world experience.',
     tag: 'Education',
   },
   {
-    period: 'Jun 2025 — Aug 2025',
+    period: 'Jun 2025 - Aug 2025',
     title: 'Research Intern',
     org: 'NIT Puducherry',
     desc: 'Developed AI-based authentication systems for autonomous vehicle networks. Designed blockchain security protocols for V2I communications.',
     tag: 'Research',
   },
   {
-    period: 'Feb 2025 — Jul 2025',
+    period: 'Feb 2025 - Jul 2025',
     title: 'Business Research Intern',
     org: 'Systech IT Consulting',
     desc: 'Analyzed market competitors and threat landscapes to support strategic decision-making.',
     tag: 'Internship',
   },
   {
-    period: 'Sep 2024 — Oct 2024',
+    period: 'Sep 2024 - Oct 2024',
     title: 'Security Auditor',
     org: 'Gyaantrix Technologies',
     desc: 'Conducted comprehensive vulnerability assessments. Identified critical business logic flaws and delivered prioritized remediation reports.',
     tag: 'Security',
   },
   {
-    period: 'Sep 2024 — Present',
+    period: 'Sep 2024 - Present',
     title: 'Forensics Researcher',
     org: 'Caff3in3-DB (CTF Team)',
-    desc: 'Solving complex digital forensics challenges — steganography, log analysis, reverse engineering, and cryptanalysis in CTF competitions.',
+    desc: 'Solving complex digital forensics challenges - steganography, log analysis, reverse engineering, and cryptanalysis in CTF competitions.',
     tag: 'CTF',
   },
   {
-    period: 'Oct 2024 — Present',
+    period: 'Oct 2024 - Present',
     title: 'University Innovation Fellow',
     org: 'Stanford d.school',
     desc: 'Applying Design Thinking to identify campus problems and develop innovative solutions.',
@@ -92,7 +92,7 @@ export default function AboutPage() {
         <p className="font-mono text-xs text-accent-green tracking-widest uppercase mb-3">~/whoami</p>
         <h1 className="text-3xl md:text-4xl font-semibold text-text mb-4">About Me</h1>
         <p className="text-text-muted max-w-xl leading-relaxed">
-          Cybersecurity student from Andhra Pradesh, India — currently pursuing B.Tech in CS with a specialization in Cybersecurity. I&apos;m drawn to the intersection of security and systems — finding vulnerabilities, building defensive tools, and understanding how things break.
+          Cybersecurity student from Andhra Pradesh, India - currently pursuing B.Tech in CS with a specialization in Cybersecurity. I&apos;m drawn to the intersection of security and systems - finding vulnerabilities, building defensive tools, and understanding how things break.
         </p>
       </div>
 
@@ -149,9 +149,9 @@ export default function AboutPage() {
             <p className="font-mono text-xs text-accent-green mb-3 tracking-widest">HONORS</p>
             <ul className="space-y-2">
               {[
-                '1st Place — CTF, MITS (Jan 2026)',
-                'Contributor — India Mobile Congress 2024',
-                'Top 1% — TryHackMe',
+                '1st Place - CTF, MITS (Jan 2026)',
+                'Contributor - India Mobile Congress 2024',
+                'Top 1% - TryHackMe',
               ].map((item) => (
                 <li key={item} className="text-xs text-text-muted leading-relaxed">{item}</li>
               ))}

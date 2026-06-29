@@ -5,7 +5,7 @@ description: "Building my first personal portfolio, the struggles behind it, and
 tags: ["portfolio", "journey", "learning"]
 music: "/music/first.mp3"
 ---
-![Portfolio Preview](/blog/preview1.png)
+![Portfolio Preview](/blog/preview.png)
 # Finally Built My Portfolio - Now What?
 
 There’s something oddly satisfying about typing your own domain into a browser and seeing *your* work staring back at you.

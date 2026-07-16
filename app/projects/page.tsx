@@ -32,6 +32,18 @@ export const projects = [
   category: 'Malware Analysis',
   status: 'Active',
 },
+{
+  title: 'RobustOTP',
+  description:
+    'Secure OTP authentication system with resilient verification and abuse prevention mechanisms.',
+  longDesc:
+    'A secure One-Time Password (OTP) authentication system designed to improve user verification through reliable OTP generation, validation, rate limiting, expiration handling, and protection against common abuse scenarios. Built with a focus on security, scalability, and seamless authentication workflows.',
+  tech: ['Node.js', 'Express.js', 'MongoDB', 'Brevo'],
+  github: 'https://github.com/venkatvellapalem/RobustOTP',
+  demo: 'https://robust-otp-cytrus.vercel.app/',
+  category: 'Authentication',
+  status: 'Active',
+},
   {
   title: 'ShadowLink',
   description:
@@ -117,6 +129,7 @@ const categoryColors: Record<string, string> = {
   'Threat Intelligence': 'text-red-400 border-red-400/30 bg-red-400/5',
   'Attack Surface Management': 'text-slate-400 border-slate-400/30 bg-slate-400/5',
   'Malware Analysis': 'text-orange-400 border-orange-400/30 bg-orange-400/5',
+  'Authentication': 'text-emerald-400 border-emerald-400/30 bg-emerald-400/5',
 }
 
 export default function ProjectsPage() {

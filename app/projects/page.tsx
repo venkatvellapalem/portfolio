@@ -9,6 +9,30 @@ export const metadata: Metadata = {
 // --- Add your projects here ---
 export const projects = [
   {
+  title: 'External Exposure Monitor (EASM)',
+  description:
+    'Enterprise Attack Surface Management platform for discovering, monitoring, and assessing internet-facing assets.',
+  longDesc:
+    'An automated External Attack Surface Management (EASM) solution that continuously discovers internet-facing assets, monitors exposed services, enriches findings with threat intelligence, and provides organizations with real-time visibility into their external attack surface through a centralized dashboard.',
+  tech: ['Python', 'FastAPI', 'Docker', 'PostgreSQL'],
+  github: 'https://github.com/venkatvellapalem/External-Exposure-Monitor',
+  demo: null,
+  category: 'Attack Surface Management',
+  status: 'Active',
+},
+  {
+  title: 'Enterprise Malware Analysis Platform',
+  description:
+    'Cloud and on-premise malware analysis sandbox with automated static and dynamic analysis pipelines.',
+  longDesc:
+    'An enterprise-grade malware analysis platform that combines cloud infrastructure with on-premise sandboxing to automate static analysis, dynamic execution, IOC extraction, and threat intelligence enrichment. Built with scalable worker nodes and a centralized dashboard for efficient malware investigation.',
+  tech: ['Python', 'FastAPI', 'Docker', 'React'],
+  github: 'https://github.com/venkatvellapalem/Malware-Analysis-Platform',
+  demo: null,
+  category: 'Malware Analysis',
+  status: 'Active',
+},
+  {
   title: 'ShadowLink',
   description:
     'Phishing detection browser extension that analyzes URLs in real time, detects phishing indicators, and warns users before visiting malicious websites.',
@@ -90,7 +114,9 @@ const categoryColors: Record<string, string> = {
   'ML / Security': 'text-purple-400 border-purple-400/30 bg-purple-400/5',
   'Research': 'text-yellow-400 border-yellow-400/30 bg-yellow-400/5',
   'Portfolio': 'text-pink-400 border-pink-400/30 bg-pink-400/5',
-  'Threat Intelligence': 'text-red-400 border-red-400/30 bg-red-400/5'
+  'Threat Intelligence': 'text-red-400 border-red-400/30 bg-red-400/5',
+  'Attack Surface Management': 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5',
+  'Malware Analysis': 'text-orange-400 border-orange-400/30 bg-orange-400/5',
 }
 
 export default function ProjectsPage() {

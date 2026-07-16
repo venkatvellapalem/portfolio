@@ -45,6 +45,14 @@ export const ctfEvents: CTFEvent[] = [
   },
   {
     year: 2026,
+    event: "HASBLCTF26",
+    ratingPoints: 0.479,
+    place: 145,
+    ctftimeEventUrl: "https://ctftime.org/event/3301",
+    source: "ctftime",
+  },
+  {
+    year: 2026,
     event: "Kashi CTF 2026",
     ratingPoints: 4.184,
     place: 156,
